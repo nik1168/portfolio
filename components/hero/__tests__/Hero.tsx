@@ -3,11 +3,11 @@ import '@testing-library/jest-dom';
 import {render} from '@testing-library/react';
 import React from 'react';
 
-import Header from '../Header';
+import Hero from '../Hero';
 
-describe('Header', () => {
+describe('Hero', () => {
   it('renders component', () => {
-    const component = render(<Header title={''} />);
+    const component = render(<Hero title={''} />);
 
     expect(component).toBeTruthy();
   });

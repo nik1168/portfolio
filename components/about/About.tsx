@@ -28,10 +28,10 @@ const About: FC = (): JSX.Element => {
           with 7 years of experience. I&apos;ve worked with both startups and
           large corporations to help build & scale their companies. I really
           love coding and building amazing projects. I&apos;m grateful to say
-          found what I really love which is Software Engineering, I&apos;m
-          really passionate about what I do so you can count on me that I will
-          always bring my &quot;A&quot; game. Let&apos;s build something Amazing
-          together!
+          that I found what I really love which is Software Engineering,
+          I&apos;m really passionate about what I do so you can count on me that
+          I will always bring my &quot;A&quot; game. Let&apos;s build something
+          Amazing together!
         </p>
       </div>
     </motion.div>

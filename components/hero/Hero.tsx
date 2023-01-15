@@ -11,7 +11,7 @@ const Hero: FC<HeroProps> = (): JSX.Element => {
     words: [
       "Hi, The Name's Niklaus Geisser",
       'Guy-who-loves-coffee.tsx',
-      '<ButLoveaToCodeMore />',
+      '<ButLovesToCodeMore />',
     ],
     loop: true,
     delaySpeed: 2000,

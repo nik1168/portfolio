@@ -7,7 +7,7 @@ const About: FC = (): JSX.Element => {
       whileInView={{opacity: 1}}
       transition={{duration: 1.5}}
       className="flex flex-col relative h-screen text-center md:text-left md:flex-row px-10 justify-evenly mx-auto items-center">
-      <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-2zl">
+      <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl">
         About
       </h3>
       <motion.img
@@ -23,14 +23,14 @@ const About: FC = (): JSX.Element => {
           <span className="underline decoration-[#F7AB0A]/50">little</span>{' '}
           background
         </h4>
-        <p className="text-md">
+        <p className="text-md text-justify">
           Hi there! 💯 I&apos;m Niklaus. I&apos;m a Fullstack software Engineer
           with 7 years of experience. I&apos;ve worked with both startups and
           large corporations to help build & scale their companies. I really
           love coding and building amazing projects. I&apos;m grateful to say
-          found what I really love which is Software Engineering, I&aposm really
-          passionate about what I do so you can count on me that I will always
-          bring my &quot;A&quot; game. Let&apos;s build something Amazing
+          found what I really love which is Software Engineering, I&apos;m
+          really passionate about what I do so you can count on me that I will
+          always bring my &quot;A&quot; game. Let&apos;s build something Amazing
           together!
         </p>
       </div>

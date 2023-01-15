@@ -3,6 +3,7 @@ import Head from 'next/head';
 import About from '../components/about/About';
 import Header from '../components/header/Header';
 import Hero from '../components/hero/Hero';
+import WorkExperience from '../components/work-experience/WorkExperience';
 
 export default function Home() {
   return (
@@ -20,12 +21,15 @@ export default function Home() {
         <Hero />
       </section>
 
-      {/*About*/}
+      {/*WorkExperience*/}
       <section id="section" className="snap-center">
         <About />
       </section>
 
       {/*Experiences*/}
+      <section id="experience" className="snap-center">
+        <WorkExperience />
+      </section>
 
       {/*Skills*/}
 

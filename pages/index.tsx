@@ -1,6 +1,7 @@
 import Head from 'next/head';
 
 import About from '../components/about/About';
+import ContactMe from '../components/contact-me/ContactMe';
 import Header from '../components/header/Header';
 import Hero from '../components/hero/Hero';
 import Projects from '../components/projects/Projects';
@@ -39,11 +40,14 @@ export default function Home() {
       </section>
 
       {/*Projects*/}
-      <section id="projects" className="snap-center">
+      <section id="projects" className="snap-start">
         <Projects />
       </section>
 
       {/*Contact Me*/}
+      <section id="contact" className="snap-start">
+        <ContactMe />
+      </section>
     </div>
   );
 }

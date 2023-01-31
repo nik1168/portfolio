@@ -1,4 +1,5 @@
 import {motion} from 'framer-motion';
+import Link from 'next/link';
 import React, {FC} from 'react';
 import {SocialIcon} from 'react-social-icons';
 
@@ -23,6 +24,7 @@ const Header: FC<HeaderProps> = (): JSX.Element => {
           bgColor="transparent"
         />
       </motion.div>
+
       <motion.div
         initial={{x: 500, opacity: 0, scale: 0.5}}
         animate={{x: 0, opacity: 1, scale: 1}}
@@ -34,9 +36,11 @@ const Header: FC<HeaderProps> = (): JSX.Element => {
           fgColor="gray"
           bgColor="transparent"
         />
-        <p className="uppercase hidden md:inline-flex text-sm text-gray-400">
-          get in touch
-        </p>
+        <Link href="#contact">
+          <p className="uppercase hidden md:inline-flex text-sm text-gray-400">
+            get in touch
+          </p>
+        </Link>
       </motion.div>
     </header>
   );

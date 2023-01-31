@@ -1,7 +1,19 @@
 import {EnvelopeIcon, MapPinIcon, PhoneIcon} from '@heroicons/react/24/solid';
 import {motion} from 'framer-motion';
 import React, {FC} from 'react';
+import {useForm} from 'react-hook-form';
+interface FormData {
+  name: string;
+  email: string;
+  subject: string;
+  message: string;
+}
 const ContactMe: FC = (): JSX.Element => {
+  const {register, handleSubmit} = useForm<FormData>();
+  const onSubmit = handleSubmit(formData => {
+    window.location.href = `mailto:ngeisser32@gmail.com?subject=${formData.subject}&body=Hi my name is ${formData.name}. ${formData.message} (${formData.email})`;
+  });
+
   return (
     <motion.div
       initial={{opacity: 0}}
@@ -32,6 +44,40 @@ const ContactMe: FC = (): JSX.Element => {
             <p className="text-2xl">La Paz, Bolivia</p>
           </div>
         </div>
+        <form
+          onSubmit={onSubmit}
+          className="flex flex-col space-y-2 w-fit mx-auto">
+          <div className="flex space-x-2">
+            <input
+              {...register('name')}
+              className="contactInput"
+              type="text"
+              placeholder="Name"
+            />
+            <input
+              {...register('email')}
+              className="contactInput"
+              type="email"
+              placeholder="Email"
+            />
+          </div>
+          <input
+            {...register('subject')}
+            className="contactInput"
+            type="text"
+            placeholder="Subject"
+          />
+          <textarea
+            {...register('message')}
+            className="contactInput"
+            placeholder="Message"
+          />
+          <button
+            className="bg-[#F7AB0A] py-5 px-10 rounded-md text-black font-bold text-lg"
+            type="submit">
+            Submit
+          </button>
+        </form>
       </div>
     </motion.div>
   );

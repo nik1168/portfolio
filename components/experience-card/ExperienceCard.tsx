@@ -14,7 +14,7 @@ const ExperienceCard: FC<ExperienceCardProps> = ({
   webpage,
 }): JSX.Element => {
   return (
-    <article className="flex flex-col rounded-lg items-center space-y-7 flex-shrink-0 w-[500px] md:w-[600px] xl:w-[900px] snap-center p-10 hover:opacity-100 opacity-40 cursor-pointer transition-opacity duration-200 overflow-hidden">
+    <article className="flex flex-col rounded-lg items-center space-y-7 flex-shrink-0 w-[500px] md:w-[600px] xl:w-[900px] snap-start md:snap-center sm:snap-center lg:snap-center xl:snap-center p-10 hover:opacity-100 opacity-40 cursor-pointer transition-opacity duration-200 overflow-hidden">
       <motion.img
         initial={{y: -100, opacity: 0}}
         transition={{duration: 1.2}}

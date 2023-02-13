@@ -46,7 +46,7 @@ const ContactMe: FC = (): JSX.Element => {
         </div>
         <form
           onSubmit={onSubmit}
-          className="flex flex-col space-y-2 w-fit mx-auto">
+          className="hidden sm:flex md:flex lg:flex xl:flex flex-col space-y-2 w-fit mx-auto">
           <div className="flex space-x-2">
             <input
               {...register('name')}

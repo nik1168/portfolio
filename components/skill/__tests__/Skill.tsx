@@ -7,7 +7,9 @@ import Skill from '../Skill';
 
 describe('Skill', () => {
   it('renders component', () => {
-    const component = render(<Skill />);
+    const component = render(
+      <Skill name={''} image={''} percentage={90} directionLeft />,
+    );
 
     expect(component).toBeTruthy();
   });

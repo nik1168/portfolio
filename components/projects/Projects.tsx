@@ -1,29 +1,29 @@
 import {motion} from 'framer-motion';
+import Link from 'next/link';
 import React, {FC} from 'react';
-const Projects: FC = (): JSX.Element => {
-  const projects = [1, 2, 3, 4, 5];
 
+import {projects} from './__data__/data';
+const Projects: FC = (): JSX.Element => {
   return (
     <motion.div
       initial={{opacity: 0}}
       whileInView={{opacity: 1}}
       transition={{duration: 1.5}}
       className="h-screen relative flex overflow-hidden flex-col text-left md:flex-row max-w-full justify-evenly mx-auto items-center z-0">
-      <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl">
+      <h3 className="absolute hidden sm:flex md:flex lg:flex xl:flex top-24 uppercase tracking-[20px] text-gray-500 text-2xl">
         Projects
       </h3>
       <div className="relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]">
-        {/*<motion.div></motion.div>*/}
         {projects.map((item, idx) => (
           <div
             key={`project-key-${idx}`}
-            className="w-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center p-20 md:p44 h-screen">
+            className="w-screen flex-shrink-0 snap-center flex flex-col space-y-6 items-center justify-center p-20 md:p44 h-screen">
             <motion.img
               initial={{y: -300, opacity: 0}}
               transition={{duration: 1.2}}
               whileInView={{opacity: 1, y: 0}}
               viewport={{once: true}}
-              src="https://github.com/nik1168/tinder-clone/raw/develop/demo/main_view_p_1.png"
+              src={item.localImage ? `/${item.image}` : item.image}
               alt=""
               className="h-64"
             />
@@ -32,11 +32,19 @@ const Projects: FC = (): JSX.Element => {
                 <span className="underline decoration-[#F7AB0A]">
                   Case Study:
                 </span>{' '}
-                Tinder Clone
+                {item.name}
               </h4>
               <p className="text-lg text-center md:text-left">
-                Tinder clone with the following features
+                {item.description}
               </p>
+              <Link
+                className="text-lg text-center md:text-left"
+                href={item.demoUrl}>
+                <span className="text-xl font-semibold underline decoration-[#F7AB0A]">
+                  Demo:
+                </span>{' '}
+                {item.demoUrl}
+              </Link>
             </div>
           </div>
         ))}

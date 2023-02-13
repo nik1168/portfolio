@@ -40,7 +40,7 @@ const WorkExperience: FC = (): JSX.Element => {
           technologies={[
             'react-logo.png',
             'angular.png',
-            'node-logo.png',
+            'node-logo.jpg',
             'spring.png',
             'typecript.png',
             'java-logo.png',

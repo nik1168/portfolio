@@ -11,7 +11,7 @@ const Hero: FC<HeroProps> = (): JSX.Element => {
     words: [
       "Hi, The Name's Niklaus Geisser",
       'Guy-who-loves-coffee.tsx',
-      '<ButLovesToCodeMore />',
+      'And build amazing projects',
     ],
     loop: true,
     delaySpeed: 2000,
@@ -28,7 +28,7 @@ const Hero: FC<HeroProps> = (): JSX.Element => {
         height={500}
       />
       <div className="z-20">
-        <h2 className="text-sm uppercase text-gray-500 pb-2 tracking-[15px]">
+        <h2 className="text-sm uppercase text-gray-500 pb-2 tracking-[15px] p-x-4">
           Software Engineer
         </h2>
         <h1 className="text-5xl lg:text-6xl font-semibold px-10">
